@@ -118,4 +118,7 @@ a:focus {
     .nav-toggle-label span {
         cursor: pointer;
     }
+    a:hover::before {
+        transform: scale(1,1);
+      }
 }
