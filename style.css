@@ -50,6 +50,22 @@ a:hover{
     color: var(--color-secondary);
     font-weight: bold;
 }
+a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: var(--color-secondary);
+    position: absolute;
+    top: -.1em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+  
+a:hover::before {
+    transform: scale(1,4);
+  }
 a:focus {
     outline-style: none;
 }
@@ -99,5 +115,7 @@ a:focus {
         top:15%;
         font-size: 1.8em;
     }
-
+    .nav-toggle-label span {
+        cursor: pointer;
+    }
 }
